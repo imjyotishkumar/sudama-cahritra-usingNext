@@ -3,7 +3,7 @@
 import { useState, useRef, useEffect } from "react";
 
 const songs = [
-  { title: "Barsho Ke Bichde", src: "/song/sab din hot na ek saman.mp3" },
+  { title: "Barsho Ke Bichde", src: "/song/Sab Din Hot Na Ek Samaan By Madan Rai [ Bhojpuri Full HD Song] I Sab Din Hot Na Ek Saman.mp3" },
   { title: "Song 2", src: "/song/sab din hot na ek saman.mp3" },
   { title: "Song 3", src: "/song/chala sudama krishna se milan dwarika dham.mp3" },
   { title: "Song 4", src: "/song/lakshmi aisi hamri. dulhniya bin raha jayen na.mp3" },
