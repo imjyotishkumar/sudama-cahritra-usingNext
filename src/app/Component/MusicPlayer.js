@@ -10,7 +10,7 @@ const songs = [
   { title: "Song 5", src: "/song/narayan namstudham sarvapara.mp3" },
   { title: "Song 6", src: "/song/nahi samjhe bit jayen.mp3" },
   { title: "Song 7", src: "/song/2020 Ki New Jhanki Krishana Sudama    Aa Ke Tu Dekh Le  Kanha    Lokesh Prjapati   Simbhawali.mp3" },
-  { title: "Song 8", src: "/song/dwar khado.mp3" },
+  { title: "Song 8", src: "/song/shish paga na jayen.mp3" },
   { title: "Song 9", src: "/song/ek mitra ka bada nibhane chale hai.mp3" },
   { title: "Song 10", src: "/song/barsho ke bichde.mp3" },
   { title: "Song 10", src: "/song/rani kare abhinandan.mp3" },
@@ -53,10 +53,10 @@ const MusicPlayer = () => {
   };
 
   return (
-    <div className="p-10">
+    <div className="p-10 bg-red-200">
       <h2></h2>
 
-      <div className="section">
+      <div className="section bg-yellow-300 p-3 border-8 rounded-md border-[#f45b3d]">
         <h3>पुरुष पात्र:</h3>
         <ol>
           <li><strong>सुदामा</strong> – एक गरीब ब्राह्मण</li>
@@ -72,8 +72,8 @@ const MusicPlayer = () => {
       </div>
 
 
-      <div class="section">
-        <h3>स्त्री पात्र:</h3>
+      <div class="section bg-yellow-300 p-3 border-8 rounded-md border-[#f45b3d]">
+        <h3 >स्त्री पात्र:</h3>
         <ol>
           <li><strong>वसुंधरा</strong> – सुदामा की पत्नी</li>
           <li><strong>सुशीला</strong> – एक ग्रामीण</li>
@@ -87,19 +87,26 @@ const MusicPlayer = () => {
       </div>
       <div className="scene">
 
-        <div class="section-1 mt-5">
+        <div class="section-1 bg-yellow-300 p-3 border-8 rounded-md border-[#f45b3d] mt-5">
 
           <div className="section-0 mt-5 mb-5 ">
             <b className=" flex justify-center items-center  ">❁ दृश्य : 0 ❁ </b>
             <p><strong>सुदामा फटे हुए धोती पहने हुए हैं, हाथ में एक लाठी है, कंधे पे एक फटी हुई गमछी है। वे भीख मांगते
               हैं </strong></p>
-            <button
-              onClick={() => playSong(0)}
-              className={`px-4 py-2 rounded-lg text-white ${currentSong === 0 && isPlaying ? "bg-red-500" : "bg-blue-500"
-                } hover:bg-blue-600`}
-            >
-              Song 1
-            </button>
+            <div className="flex items-center justify-center mt-2 mb-2 ">
+              <button
+                onClick={() => playSong(0)}
+                className={`px-4 py-2 rounded-lg text-white ${currentSong === 0 && isPlaying ? "bg-red-500" : "bg-gray-500"
+                  } hover:bg-green-600`}
+              >
+                {
+                  currentSong === 0 && isPlaying ? <span className="font-bold">Pause</span> :
+                    <span className="font-bold">Play</span>
+
+                }
+
+              </button>
+            </div>
 
             <p>
               आज सुदामा जी को अच्छी खासी भीख मिलती है।  वे गाते हुए एक सुनसान गली से गुजरते है।  तभी कुछ डाकू सुदामा जी से भेट हो जाते है।  <br></br>
@@ -123,28 +130,35 @@ const MusicPlayer = () => {
           <p><strong>सुदामा (फुट – फुट कर रोते हुए):</strong> बसुंधरे, मैं पिछले तीन दिनों से भीख मांग रहा हूँ, लेकिन भीख
             नहीं मिल रही है। न जाने अब बिधाता की क्या इच्छा है!</p>
           <p><strong>वसुंधरा:</strong> (शिशकिया लेकर रोने लगती है।)</p>
-          <button
-            onClick={() => playSong(13)}
-            className={`px-4 py-2 rounded-lg text-white ${currentSong === 13 && isPlaying ? "bg-red-500" : "bg-blue-500"
-              } hover:bg-blue-600`}
-          >
-            Song
-          </button>
+          <div className="flex items-center justify-center mt-2 mb-2 ">
+              <button
+                onClick={() => playSong(13)}
+                className={`px-4 py-2 rounded-lg text-white ${currentSong === 13 && isPlaying ? "bg-red-500" : "bg-gray-500"
+                  } hover:bg-green-600`}
+              >
+                {
+                  currentSong === 13 && isPlaying ? <span className="font-bold">Pause</span> :
+                    <span className="font-bold">Play</span>
+
+                }
+
+              </button>
+            </div>
           <p className="mt-5">
             <strong>बसुंधरा : </strong>( अपनी आसुओ को पोछती हुई ) स्वामी , एक दिन आप बोल रहे थे की श्री कृष्णा आपके बचपन के मित्र है।  और आप उनके सबसे प्रिय मित्र थे
-           <br></br> <strong>सुदामा : </strong>  हाँ , बसुन्धरे श्री कृष्णा मेरे परम मित्र थे  हमदोनो बचपन में एक ही आश्रम में पढ़ते थे वह मुझे बहुत प्यार  करता था। वह मेरे बिना कभी खाना नहीं खाता था और न ही तो मेरे बिना कभी आश्रम में रहता था  मैं उसे कान्हा कहकर बुलाता था।  जानती हो बसुन्धरे , एक दिन कृष्णा आश्रम में बीमार पड़ गया था गुरु माता ने उसे दवाई दी और मुझे कान्हा का ध्यान रखने के लिए बोली दवाई खाने के बाद कान्हा अपना सिर मेरे  गोद में रखकर सो गया और बड़े प्यार से मैं उसका सिर सहलाने लगा जिससे उसे नींद आ गयी कान्हा की कही नींद न टूट जाएँ , मैं रात भर उसका सिर अपने गोद में ही लिए रहा।  जानती हो बसुन्धरे जब सुबह में उसकी आखें खुली तो उसने क्या कहा ?
-           <br></br> <strong> बसुंधरा : </strong> क्या कहा स्वामी ?
-           <br></br> <strong> सुदामा : </strong> ये सब देखकर श्री कृष्णा मेरे सीने से लिपटकर रोने लगा और कहा  सुदामा तुम सच मुच में मेरे सबसे प्रिय मित्र हो।  मैं तुम्हे कभी नहीं भूलूंगा सुदामा।  आज से मैं तुम्हारा हर दुःख में साथ रहुंगा मित्रता मैं निभाउंगा हम दोनों के मित्रता के बिच कभी भी धन सम्पति और अहंकार नहीं आएगा और वह फिर से मेरे सीने से लिपट गया।  खैर छोडो ये सब बचपन की बातें है अब तो वह मुझे भूल गया होगा लेकिन मैं तो उसे रोज याद करता हूँ
-           <br></br> <strong>  बसुंधरा : </strong> नहीं स्वामी भूलते वो है जो इंसान होते है वो तो भगवान है दयावान है भला वो आपको कैसे भूल सकते है।  अब तो वे द्वारिका के राजा है। हमें लगता है की आप उनके पास एक बार जाएँ वे आपकी सारी तकलीफे दूर कर देंगे।
-           <br></br><strong>  सुदामा : </strong>नहीं , बसुन्धरे विपत्ति काल में अपने मित्र से सहायता नहीं लेनी चाहिए। मैं वहां नहीं जाऊंगा और ये सब बहुत पुराणी बातें है , बचपन की बातें है अब तो वो शायद मुझे भूल गया होगा । मुझे पहचान भी नहीं पाएगा । 
-           <br></br> <strong> बसुंधरा:</strong> लकिन आप तो उन्हें रोज याद करते है । और उनकी पूजा भी करते है ।
-           <br></br> <strong>सुदामा :</strong>  हाँ करता हूँ , और हमेशा करता रहूँगा । तुम भी श्री कृष्णा की श्रद्धा से जो भी बनता हो उनका भोग लगाओ और पूजा अर्चना करो ।
-           <br></br> <strong> बसुंधरा :</strong> ( थोड़ी थोड़ी गुस्सा का नाटक करती हुई । ) नहीं मुझे वैसे भगवान  की पूजा नहीं करनी है जो विपत्ति में अपने निर्धन मित्र की कोई सहायता ना कर सके ।
+            <br></br> <strong>सुदामा : </strong>  हाँ , बसुन्धरे श्री कृष्णा मेरे परम मित्र थे  हमदोनो बचपन में एक ही आश्रम में पढ़ते थे वह मुझे बहुत प्यार  करता था। वह मेरे बिना कभी खाना नहीं खाता था और न ही तो मेरे बिना कभी आश्रम में रहता था  मैं उसे कान्हा कहकर बुलाता था।  जानती हो बसुन्धरे , एक दिन कृष्णा आश्रम में बीमार पड़ गया था गुरु माता ने उसे दवाई दी और मुझे कान्हा का ध्यान रखने के लिए बोली दवाई खाने के बाद कान्हा अपना सिर मेरे  गोद में रखकर सो गया और बड़े प्यार से मैं उसका सिर सहलाने लगा जिससे उसे नींद आ गयी कान्हा की कही नींद न टूट जाएँ , मैं रात भर उसका सिर अपने गोद में ही लिए रहा।  जानती हो बसुन्धरे जब सुबह में उसकी आखें खुली तो उसने क्या कहा ?
+            <br></br> <strong> बसुंधरा : </strong> क्या कहा स्वामी ?
+            <br></br> <strong> सुदामा : </strong> ये सब देखकर श्री कृष्णा मेरे सीने से लिपटकर रोने लगा और कहा  सुदामा तुम सच मुच में मेरे सबसे प्रिय मित्र हो।  मैं तुम्हे कभी नहीं भूलूंगा सुदामा।  आज से मैं तुम्हारा हर दुःख में साथ रहुंगा मित्रता मैं निभाउंगा हम दोनों के मित्रता के बिच कभी भी धन सम्पति और अहंकार नहीं आएगा और वह फिर से मेरे सीने से लिपट गया।  खैर छोडो ये सब बचपन की बातें है अब तो वह मुझे भूल गया होगा लेकिन मैं तो उसे रोज याद करता हूँ
+            <br></br> <strong>  बसुंधरा : </strong> नहीं स्वामी भूलते वो है जो इंसान होते है वो तो भगवान है दयावान है भला वो आपको कैसे भूल सकते है।  अब तो वे द्वारिका के राजा है। हमें लगता है की आप उनके पास एक बार जाएँ वे आपकी सारी तकलीफे दूर कर देंगे।
+            <br></br><strong>  सुदामा : </strong>नहीं , बसुन्धरे विपत्ति काल में अपने मित्र से सहायता नहीं लेनी चाहिए। मैं वहां नहीं जाऊंगा और ये सब बहुत पुराणी बातें है , बचपन की बातें है अब तो वो शायद मुझे भूल गया होगा । मुझे पहचान भी नहीं पाएगा ।
+            <br></br> <strong> बसुंधरा:</strong> लकिन आप तो उन्हें रोज याद करते है । और उनकी पूजा भी करते है ।
+            <br></br> <strong>सुदामा :</strong>  हाँ करता हूँ , और हमेशा करता रहूँगा । तुम भी श्री कृष्णा की श्रद्धा से जो भी बनता हो उनका भोग लगाओ और पूजा अर्चना करो ।
+            <br></br> <strong> बसुंधरा :</strong> ( थोड़ी थोड़ी गुस्सा का नाटक करती हुई । ) नहीं मुझे वैसे भगवान  की पूजा नहीं करनी है जो विपत्ति में अपने निर्धन मित्र की कोई सहायता ना कर सके ।
 
           </p>
 
         </div>
-        <div className="section-2 mt-5 mb-5">
+        <div className="section-2 bg-yellow-300 p-3 border-8 rounded-md border-[#f45b3d] mt-5 mb-5">
           <div class="scene">
             <h2>
               <center>❁ दृश्य : 2 ❁</center>
@@ -172,7 +186,7 @@ const MusicPlayer = () => {
           </div>
 
         </div>
-        <div className="section-3 mt-5 mb-5">
+        <div className="section-3 bg-yellow-300 p-3 border-8 rounded-md border-[#f45b3d] mt-5 mb-5">
           <h2>
             <center>❁ दृश्य : 3 ❁</center>
           </h2>
@@ -196,16 +210,23 @@ const MusicPlayer = () => {
             बिखर जाती है। एक कुत्ता खीर को खाने लगता है।</p>
           <p><strong>सुदामा:</strong> श्री कृष्ण... श्री कृष्ण...</p>
           <p>फिर सुदामा भीख मांगने नगर जाते हैं और भीख मांगते हैं।</p>
-          <button
-            onClick={() => playSong(1)}
-            className={`px-4 py-2 rounded-lg text-white ${currentSong === 1 && isPlaying ? "bg-red-500" : "bg-blue-500"
-              } hover:bg-blue-600`}
-          >
-            Song 2
-          </button>
+          <div className="flex items-center justify-center mt-2 mb-2 ">
+              <button
+                onClick={() => playSong(1)}
+                className={`px-4 py-2 rounded-lg text-white ${currentSong === 1 && isPlaying ? "bg-red-500" : "bg-gray-500"
+                  } hover:bg-green-600`}
+              >
+                {
+                  currentSong === 1 && isPlaying ? <span className="font-bold">Pause</span> :
+                    <span className="font-bold">Play</span>
+
+                }
+
+              </button>
+            </div>
         </div>
 
-        <div className="section-4 mt-5 mb-5 ">
+        <div className="section-4 bg-yellow-300 p-3 border-8 rounded-md border-[#f45b3d] mt-5 mb-5 ">
           <div class="scene">
             <h2>
               <center>❁ दृश्य ❁</center>
@@ -273,19 +294,26 @@ const MusicPlayer = () => {
           </div>
 
         </div>
-        <div className="section-5 mt-5 mb-5 ">
+        <div className="section-5 bg-yellow-300 p-3 border-8 rounded-md border-[#f45b3d] mt-5 mb-5 ">
           <h2>
             <center>❁ दृश्य : 4 ❁</center>
           </h2>
           <p>(सुदामा द्वारिका के लिए रवाना होते हैं
             रास्ते में काफी कंकड़, पत्थर, झाड़ी एवं सूर्य की तीखी धूप होती हैं ।)</p>
-          <button
-            onClick={() => playSong(2)}
-            className={`px-4 py-2 rounded-lg text-white ${currentSong === 2 && isPlaying ? "bg-red-500" : "bg-blue-500"
-              } hover:bg-blue-600`}
-          >
-            Song 3
-          </button>
+            <div className="flex items-center justify-center mt-2 mb-2 ">
+              <button
+                onClick={() => playSong(2)}
+                className={`px-4 py-2 rounded-lg text-white ${currentSong === 2 && isPlaying ? "bg-red-500" : "bg-gray-500"
+                  } hover:bg-green-600`}
+              >
+                {
+                  currentSong === 2 && isPlaying ? <span className="font-bold">Pause</span> :
+                    <span className="font-bold">Play</span>
+
+                }
+
+              </button>
+            </div>
           <p><strong>सुदामा :</strong> जय श्री कृष्ण ---5</p>
           <p>( कठिन डगर के कारण सुदामा का चलना मुश्किल हो जाता है तभी श्री कृष्ण भेष बदलकर एक राहगीर के रूप में उन्हें मदद
             करने वहाँ आते हैं । श्री कृष्ण मुरली बजाते हुए – अपनी धुन में चलते रहते है । </p>
@@ -334,13 +362,20 @@ const MusicPlayer = () => {
           <p><strong>मुरली :</strong> हाँ , हाँ वो , वो तो बड़ी सुंदर है । बहुत ही मनमोहक है, उसकी याद में कभी मुरली बजाता
             हूँ और कभी गाना गाता हूँ।</p>
           <p>Music (गाना .... लक्ष्मी जैसी हमरी....)</p>
-          <button
-            onClick={() => playSong(3)}
-            className={`px-4 py-2 rounded-lg text-white ${currentSong === 3 && isPlaying ? "bg-red-500" : "bg-blue-500"
-              } hover:bg-blue-600`}
-          >
-            Song 3
-          </button>
+          <div className="flex items-center justify-center mt-2 mb-2 ">
+              <button
+                onClick={() => playSong(3)}
+                className={`px-4 py-2 rounded-lg text-white ${currentSong === 3 && isPlaying ? "bg-red-500" : "bg-gray-500"
+                  } hover:bg-green-600`}
+              >
+                {
+                  currentSong === 3 && isPlaying ? <span className="font-bold">Pause</span> :
+                    <span className="font-bold">Play</span>
+
+                }
+
+              </button>
+            </div>
           <p><strong>मुरली :</strong> मान्यवर , आप अपनी पत्नी की याद में गाना नहीं गाते ?</p>
           <p><strong>सुदामा :</strong> नहीं , नहीं , मैं नहीं गाता ऐसी गाना , मैं तो भगवान की स्तूती गाता हूँ । श्री कृष्ण
             ....2</p>
@@ -358,16 +393,23 @@ const MusicPlayer = () => {
             पत्थर
             की मूर्ति को साफ करके उस पर पुष्प चढ़ाते हैं और स्तुति गाना शुरू करते हैं ।</p>
           <p>Music (नारायण नमस्तुभयम.... )</p>
-          <button
-            onClick={() => playSong(14)}
-            className={`px-4 py-2 rounded-lg text-white ${currentSong === 14 && isPlaying ? "bg-red-500" : "bg-blue-500"
-              } hover:bg-blue-600`}
-          >
-            Song 5
-          </button>
+          <div className="flex items-center justify-center mt-2 mb-2 ">
+              <button
+                onClick={() => playSong(14)}
+                className={`px-4 py-2 rounded-lg text-white ${currentSong === 14 && isPlaying ? "bg-red-500" : "bg-gray-500"
+                  } hover:bg-green-600`}
+              >
+                {
+                  currentSong === 14 && isPlaying ? <span className="font-bold">Pause</span> :
+                    <span className="font-bold">Play</span>
+
+                }
+
+              </button>
+            </div>
           <p>(दोनों घर परिवार की बातें करते हुए बहुत दूर निकल जाते हैं )।</p>
         </div>
-        <div className="section-6 mt-5 mb-5 ">
+        <div className="section-6 bg-yellow-300 p-3 border-8 rounded-md border-[#f45b3d] mt-5 mb-5 ">
           <h2>
             <center>❁ दृश्य : 5 ❁</center>
           </h2>
@@ -384,13 +426,20 @@ const MusicPlayer = () => {
             हैं।)</p>
           <p>(सुदामा द्वारिका की भव्यता और सुंदरता को देखकर आश्चर्यचकित है। लोगों की काफी चहल पहल है ।)</p>
           <p>Music (द्वारिका को देखते ही दुख सब दूर हुए .. )</p>
-          <button
-            onClick={() => playSong(5)}
-            className={`px-4 py-2 rounded-lg text-white ${currentSong === 5 && isPlaying ? "bg-red-500" : "bg-blue-500"
-              } hover:bg-blue-600`}
-          >
-            Song 6
-          </button>
+          <div className="flex items-center justify-center mt-2 mb-2 ">
+              <button
+                onClick={() => playSong(5)}
+                className={`px-4 py-2 rounded-lg text-white ${currentSong === 5 && isPlaying ? "bg-red-500" : "bg-gray-500"
+                  } hover:bg-green-600`}
+              >
+                {
+                  currentSong === 5 && isPlaying ? <span className="font-bold">Pause</span> :
+                    <span className="font-bold">Play</span>
+
+                }
+
+              </button>
+            </div>
           <p>( वहीं चार ग्रामीण उनको (सुदामा) देखकर आश्चर्यचकित है । )</p>
           <p><strong>ग्रामीण 1 :</strong> आओ , आओ , ये घबराया – घबराया सा मनुष्य किसे ढूंढ रहा है ।</p>
           <p><strong>ग्रामीण 2 :</strong> ये कोई परदेसी है क्योंकि द्वारिका में तो ऐसा दरिद्र कोई हो ही नहीं सकता।</p>
@@ -453,13 +502,20 @@ const MusicPlayer = () => {
           <p><strong>द्वारपाल :</strong> (गुस्से से) – नहीं भाई मैं आपको उनसे नहीं मिलवा सकता हूँ। आप लौट जाइए यहाँ से ।
           </p>
           <p>Music….….….….….….</p>
-          <button
-            onClick={() => playSong(6)}
-            className={`px-4 py-2 rounded-lg text-white ${currentSong === 6 && isPlaying ? "bg-red-500" : "bg-blue-500"
-              } hover:bg-blue-600`}
-          >
-            Song 7
-          </button>
+          <div className="flex items-center justify-center mt-2 mb-2 ">
+              <button
+                onClick={() => playSong(6)}
+                className={`px-4 py-2 rounded-lg text-white ${currentSong === 6 && isPlaying ? "bg-red-500" : "bg-gray-500"
+                  } hover:bg-green-600`}
+              >
+                {
+                  currentSong === 6 && isPlaying ? <span className="font-bold">Pause</span> :
+                    <span className="font-bold">Play</span>
+
+                }
+
+              </button>
+            </div>
           <p><strong>द्वारपाल 2 :</strong> (मुख्य द्वारपाल से )- भैया हमें लगता है की आप इनका संदेशा द्वारिकाधिश तक पहुंचा
             दें , हो सकता है की ये ब्राह्मण देवता द्वारिकाधीश के मित्र ही हो ।</p>
           <p><strong>द्वारपाल :</strong> ठीक है भाई, मैं इनका संदेशा द्वारिकाधीश तक पहुँचा देता हूँ।</p>
@@ -478,7 +534,7 @@ const MusicPlayer = () => {
             । मैं कहता हूँ की शीघ्र लौट चलो सुदामा , लौट चलो । संकोच न करो तुरंत निर्णय लो।</p>
           <p>(सुदामा वहाँ से रोते हुए लौट जाता हैं ।)</p>
         </div>
-        <div className="section-7 mt-5 mb-5 ">
+        <div className="section-7 bg-yellow-300 p-3border-8 rounded-md border-[#f45b3d] mt-5 mb-5 ">
           <h2>
             <center>
               <p>❁ दृश्य : 6 ❁</p>
@@ -511,25 +567,39 @@ const MusicPlayer = () => {
           <p><strong>श्री कृष्ण :</strong> (आश्चर्य से) आ.... हमारा परम मित्र ! कौन है वो ? कहाँ से आया है ? क्या नाम है
             उसका ?</p>
           <p>Music (शीश पगा न ............ )</p>
-          <button
-            onClick={() => playSong(7)}
-            className={`px-4 py-2 rounded-lg text-white ${currentSong === 7 && isPlaying ? "bg-red-500" : "bg-blue-500"
-              } hover:bg-blue-600`}
-          >
-            Song 8
-          </button>
+          <div className="flex items-center justify-center mt-2 mb-2 ">
+              <button
+                onClick={() => playSong(7)}
+                className={`px-4 py-2 rounded-lg text-white ${currentSong === 7 && isPlaying ? "bg-red-500" : "bg-gray-500"
+                  } hover:bg-green-600`}
+              >
+                {
+                  currentSong === 7 && isPlaying ? <span className="font-bold">Pause</span> :
+                    <span className="font-bold">Play</span>
+
+                }
+
+              </button>
+            </div>
 
           <p>(श्री कृष्ण सुदामा का नाम सुनते ही भावुक हो जाते हैं। वह अपने मित्र से मिलने के लिए व्याकुल हो जाते हैं।)</p>
           <p><strong>श्री कृष्ण :</strong> सुदामा, मेरे मित्र !(श्री कृष्णा अपने सिंहासन छोड़कर सुदामा से मिलने के लिए
             पागलों की तरह महल से बाहर दौड़ते हैं।)</p>
           <p>Background music…..नाम सुदामा का सुनते ही .... .. रूठ मित्र मनाने चले हैं।</p>
-          <button
-            onClick={() => playSong(8)}
-            className={`px-4 py-2 rounded-lg text-white ${currentSong === 8 && isPlaying ? "bg-red-500" : "bg-blue-500"
-              } hover:bg-blue-600`}
-          >
-            Song 9
-          </button>
+          <div className="flex items-center justify-center mt-2 mb-2 ">
+              <button
+                onClick={() => playSong(8)}
+                className={`px-4 py-2 rounded-lg text-white ${currentSong === 8 && isPlaying ? "bg-red-500" : "bg-gray-500"
+                  } hover:bg-green-600`}
+              >
+                {
+                  currentSong === 8 && isPlaying ? <span className="font-bold">Pause</span> :
+                    <span className="font-bold">Play</span>
+
+                }
+
+              </button>
+            </div>
           <p><strong>श्री कृष्ण :</strong> सुदामा .... सुदामा .... किधर गया मेरा मित्र , ;कहाँ गया सुदामा , कहाँ गया मेरा
             मित्र, मेरे सुदामा नजर नहीं आता ?</p>
           <p><strong>सैनिक :</strong> वो तो लोट गए, द्वारिकाधीश।</p>
@@ -545,13 +615,20 @@ const MusicPlayer = () => {
             प्रवेश।)</p>
           <p><strong>श्रीकृष्ण :</strong> सुदामा! सुदामा!....(सुदामा श्री कृष्ण को मुड़कर देखते हैं )</p>
           <p>Background Music….….….</p>
-          <button
-            onClick={() => playSong(9)}
-            className={`px-4 py-2 rounded-lg text-white ${currentSong === 9 && isPlaying ? "bg-red-500" : "bg-blue-500"
-              } hover:bg-blue-600`}
-          >
-            Song 9
-          </button>
+          <div className="flex items-center justify-center mt-2 mb-2 ">
+              <button
+                onClick={() => playSong(9)}
+                className={`px-4 py-2 rounded-lg text-white ${currentSong === 9 && isPlaying ? "bg-red-500" : "bg-gray-500"
+                  } hover:bg-green-600`}
+              >
+                {
+                  currentSong === 9 && isPlaying ? <span className="font-bold">Pause</span> :
+                    <span className="font-bold">Play</span>
+
+                }
+
+              </button>
+            </div>
           <p>( दोनों मित्र गले लगा कर लिपट जाते हैं।</p>
           <p>दोनों रोने लगते हैं ।)</p>
           <p><strong>श्री कृष्ण :</strong> सुदामा, मेरे मित्र !</p>
@@ -568,7 +645,7 @@ const MusicPlayer = () => {
           <p><strong>द्वारपाल :</strong> सारे राजमहल को सजा दो और रानियों को बोलो की मेरे मित्र की स्वागत करने की तैयारी
             करें ।</p>
         </div>
-        <div className="section-8 mt-5 mb-5 ">
+        <div className="section-8 bg-yellow-300 p-3 border-8 rounded-md border-[#f45b3d] mt-5 mb-5 ">
           <h2>
             <center>
               <p>❁ दृश्य : 7 ❁</p>
@@ -578,13 +655,20 @@ const MusicPlayer = () => {
             उतारती है ।
             Background Music – निज सिंहासन मित्र ।। )</p>
           <br></br>
-          <button
-            onClick={() => playSong(10)}
-            className={`px-4 py-2 rounded-lg text-white ${currentSong === 10 && isPlaying ? "bg-red-500" : "bg-blue-500"
-              } hover:bg-blue-600`}
-          >
-            Song 11
-          </button>
+          <div className="flex items-center justify-center mt-2 mb-2 ">
+              <button
+                onClick={() => playSong(10)}
+                className={`px-4 py-2 rounded-lg text-white ${currentSong === 10 && isPlaying ? "bg-red-500" : "bg-gray-500"
+                  } hover:bg-green-600`}
+              >
+                {
+                  currentSong === 10 && isPlaying ? <span className="font-bold">Pause</span> :
+                    <span className="font-bold">Play</span>
+
+                }
+
+              </button>
+            </div>
           <br></br>
 
           <b>पैर धोने के लिए एक परात और जग रहता है</b>
@@ -592,20 +676,27 @@ const MusicPlayer = () => {
           श्री कृष्ण सुदामा को अपने सिंहासन पर बैठाते हैं ।रानियाँ उनका पैर धोने के लिए थाल लाते हैं ।
           <p>(सुदामा को हल्दी, चंदन और गुलाब जल से स्नान कराया जाता है । उन्हें नया वस्त्र पहनाया जाता है)</p>
         </div>
-        <div className="section-9 mt-5 mb-5 ">
+        <div className="section-9 bg-yellow-300 p-3 border-8 rounded-md border-[#f45b3d] mt-5 mb-5 ">
           <h2>
             <center>❁ दृश्य : 8 ❁</center>
           </h2>
           <p>सुदामा आराम गृह में स्नान करके नए वस्त्र पहन कर आराम कर रहे हैं, सुदामा चावल की पोटली देखकर मन-ही-मन शर्माते
             हैं ।</p>
           <p><b>Background music –</b></p>
-          <button
-            onClick={() => playSong(11)}
-            className={`px-4 py-2 rounded-lg text-white ${currentSong === 11 && isPlaying ? "bg-red-500" : "bg-blue-500"
-              } hover:bg-blue-600`}
-          >
-            Song 12
-          </button>
+          <div className="flex items-center justify-center mt-2 mb-2 ">
+              <button
+                onClick={() => playSong(11)}
+                className={`px-4 py-2 rounded-lg text-white ${currentSong === 11 && isPlaying ? "bg-red-500" : "bg-gray-500"
+                  } hover:bg-green-600`}
+              >
+                {
+                  currentSong === 11 && isPlaying ? <span className="font-bold">Pause</span> :
+                    <span className="font-bold">Play</span>
+
+                }
+
+              </button>
+            </div>
           <p>(पगला सोच रहा , ये लाज का मारा .... )</p>
           <p>सुदामा आराम गृह में पलंग पे रखा हुआ मसलंद से चावल की पोटली छुपाते है । तभी श्री कृष्ण अपने तीनों पटरानियाँ के
             साथ कक्ष में पहुँच जाते है । श्री कृष्ण सुदामा को चावल छुपते हुए देख लेते हैं ।</p>
@@ -641,13 +732,20 @@ const MusicPlayer = () => {
             से सुगंधित ये अनमोल रत्न , अरे ये तो संसार के सबसे उत्तम , सबसे अनमोल भेट हैं और इसे छिपा रहे थे तुम । इन तीन
             मुट्ठी चावल पर तो मैं इन तीनों लोक वार दूँ । .... हाँ सुदामा तीनों लोक वार दूँ । ....</p>
           <p><b>Background music –</b></p>
-          <button
-            onClick={() => playSong(12)}
-            className={`px-4 py-2 rounded-lg text-white ${currentSong === 12 && isPlaying ? "bg-red-500" : "bg-blue-500"
-              } hover:bg-blue-600`}
-          >
-            Song 13
-          </button>
+          <div className="flex items-center justify-center mt-2 mb-2 ">
+              <button
+                onClick={() => playSong(12)}
+                className={`px-4 py-2 rounded-lg text-white ${currentSong === 12 && isPlaying ? "bg-red-500" : "bg-gray-500"
+                  } hover:bg-green-600`}
+              >
+                {
+                  currentSong === 12 && isPlaying ? <span className="font-bold">Pause</span> :
+                    <span className="font-bold">Play</span>
+
+                }
+
+              </button>
+            </div>
           <p>( हाथ में चावल लेते ही .... )</p>
           <p>(श्री कृष्ण दो मुट्ठी चावल खाते हैं और जैसे ही वे तीसरी मुट्ठी चावल खाने लगते हैं की रुकमिनी उनका हाथ पकड़
             लेती
@@ -669,7 +767,7 @@ const MusicPlayer = () => {
 
 
         </div>
-        <div className="section-10">
+        <div className="section-10 bg-yellow-300 p-3 border-8 rounded-md border-[#f45b3d]">
           <div class="container">
 
             <h2>This drama is written by Subodh Kumar.</h2>
