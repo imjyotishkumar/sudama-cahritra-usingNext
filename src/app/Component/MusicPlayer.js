@@ -534,7 +534,7 @@ const MusicPlayer = () => {
             । मैं कहता हूँ की शीघ्र लौट चलो सुदामा , लौट चलो । संकोच न करो तुरंत निर्णय लो।</p>
           <p>(सुदामा वहाँ से रोते हुए लौट जाता हैं ।)</p>
         </div>
-        <div className="section-7 bg-yellow-300 p-3border-8 rounded-md border-[#f45b3d] mt-5 mb-5 ">
+        <div className="section-7 bg-yellow-300 p-3 border-8 rounded-md border-[#f45b3d] mt-5 mb-5 ">
           <h2>
             <center>
               <p>❁ दृश्य : 6 ❁</p>
