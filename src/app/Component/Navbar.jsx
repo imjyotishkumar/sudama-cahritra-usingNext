@@ -1,3 +1,4 @@
+"use client"
 import { useState } from "react";
 import { Bars3Icon, BellIcon, HeartIcon, MagnifyingGlassIcon } from "@heroicons/react/24/solid";
 
