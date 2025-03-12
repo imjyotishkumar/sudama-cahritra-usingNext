@@ -18,6 +18,7 @@ const songs = [
   { title: "Song 10", src: "/song/hath me chabal lete hi sab me dar bhao wyap.mp3" },
   { title: "Song 10", src: "/song/kanhaiya har ghadi mujhko.mp3" },
   { title: "Song 10", src: "/song/narayan namstubhayam and radhe krishna.mp3" },
+  { title: "Song 10", src: "/song/dialog1.mp3" },
 
 
 ];
@@ -55,8 +56,8 @@ const MusicPlayer = () => {
   return (
     <div className="p-10 bg-red-200">
       <h2></h2>
-
-      <div className="section bg-yellow-300 p-3 border-8 rounded-md border-[#f45b3d]">
+<div className="bg-yellow-300 p-3 border-8 rounded-md border-[#f45b3d]">
+      <div className="section ">
         <h3>पुरुष पात्र:</h3>
         <ol>
           <li><strong>सुदामा</strong> – एक गरीब ब्राह्मण</li>
@@ -68,11 +69,12 @@ const MusicPlayer = () => {
           <li><strong>सैनिक</strong> – चार</li>
           <li><strong>चक्रधर</strong></li>
           <li><strong>आयासी राजा</strong></li>
+          <li><strong> डाकू  </strong>- 4 / 5</li>
         </ol>
       </div>
 
 
-      <div class="section bg-yellow-300 p-3 border-8 rounded-md border-[#f45b3d]">
+      <div class="section mt-5 mb-5">
         <h3 >स्त्री पात्र:</h3>
         <ol>
           <li><strong>वसुंधरा</strong> – सुदामा की पत्नी</li>
@@ -84,6 +86,7 @@ const MusicPlayer = () => {
           <li><strong>सत्यभामा</strong></li>
           <li><strong>तीन – चार ग्रामीण स्त्रियाँ</strong> (जिनसे सुदामा जी भीख मांगते हैं)</li>
         </ol>
+      </div>
       </div>
       <div className="scene">
 
@@ -469,7 +472,7 @@ const MusicPlayer = () => {
             से उनका परिसर आरंभ हो जाता हैं ।</p>
           <p><strong>सुदामा :</strong> धन्यवाद ।</p>
           <p><strong>ग्रामीण 2 :</strong> द्वारिकाधीश को अपना मित्र बता रहा है । कोई पागल सा लगता है ।</p>
-          <p>(चारों ग्रामीण हँसते हैं उसपर मजाक उड़ते हैं ) सुदामा निराश होते हुए भारी मन से श्री कृष्ण के महल के पास
+          <p>(चारों ग्रामीण हँसते हैं उसपर मजाक उड़ते हैं ) <br></br> सुदामा निराश होते हुए भारी मन से श्री कृष्ण के महल के पास
             पहुंचते
             हैं । श्री कृष्ण के महल की सुंदरता देखते बनती हैं । 5-6 सैनिक और दरवाजे पे मुख्य द्वारपाल खड़े हैं )।</p>
           <p><strong>सुदामा :</strong> द्वारपाल भाई , क्या श्री द्वारिकाधीश का महल यही हैं?</p>
@@ -567,7 +570,7 @@ const MusicPlayer = () => {
           <p><strong>श्री कृष्ण :</strong> (आश्चर्य से) आ.... हमारा परम मित्र ! कौन है वो ? कहाँ से आया है ? क्या नाम है
             उसका ?</p>
           <p>Music (शीश पगा न ............ )</p>
-          <div className="flex items-center justify-center mt-2 mb-2 ">
+          <div className="flex flex-col items-center justify-center mt-2 mb-2 ">
               <button
                 onClick={() => playSong(7)}
                 className={`px-4 py-2 rounded-lg text-white ${currentSong === 7 && isPlaying ? "bg-red-500" : "bg-gray-500"
@@ -580,6 +583,20 @@ const MusicPlayer = () => {
                 }
 
               </button>
+             <div className="mt-5 mb-5">
+              <button
+                onClick={() => playSong(15)}
+                className={`px-4 py-2 rounded-lg text-white ${currentSong === 15 && isPlaying ? "bg-red-500" : "bg-gray-500"
+                  } hover:bg-green-600`}
+              >
+                {
+                  currentSong === 15 && isPlaying ? <span className="font-bold">Pause</span> :
+                    <span className="font-bold">Play</span>
+
+                }
+
+              </button>
+              </div>
             </div>
 
           <p>(श्री कृष्ण सुदामा का नाम सुनते ही भावुक हो जाते हैं। वह अपने मित्र से मिलने के लिए व्याकुल हो जाते हैं।)</p>
