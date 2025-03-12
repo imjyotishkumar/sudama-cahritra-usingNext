@@ -1,14 +1,13 @@
 "use client"
-import { useState, useRef } from "react";
-import MusicPlayer from "./Component/MusicPlayer";
+import Home from "./home/page";
 
 
-export default function Home() {
+export default function Main() {
 
   return (
    <>
    <div>
-    <MusicPlayer/>
+    <Home/>
    </div>
    </>
   );
