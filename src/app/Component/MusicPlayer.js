@@ -54,7 +54,7 @@ const MusicPlayer = () => {
   };
 
   return (
-    <div className="p-10 bg-red-200">
+    <div className=" bg-red-200">
       <div className="Heading bg-[#FDC700] w-full p-3 mt-5 mb-5 flex items-center justify-center ">
 <h1 className="text-[30px] font-bold text-[#155DFC]">सुदामा <span className="text-[#016630]"> चरित्र</span>  </h1>
       </div>
