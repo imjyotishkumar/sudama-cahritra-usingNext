@@ -530,7 +530,22 @@ const MusicPlayer = () => {
             एवं
             सैनिकों को दीन – हीन भाव से निहारते हैं तभी सभी सैनिक और द्वारपाल सुदामा पर हँसते हैं )।</p>
           <p>(सुदामा दुविधा में हैं की श्री कृष्ण से मिले या नहीं तभी सुदामा की आत्मा की आवाज आती हैं । ....</p>
-          <p><strong>सुदामा की अंतः आत्मा :</strong> लौट जाओ सुदामा , लौट जाओ , देखा , बुलावा आने में कितना विलंब कर दिया
+            
+          <p><strong>सुदामा की अंतः आत्मा : <div className="mt-5 mb-5">
+              <button
+                onClick={() => playSong(15)}
+                className={`px-4 py-2 rounded-lg text-white ${currentSong === 15 && isPlaying ? "bg-red-500" : "bg-gray-500"
+                  } hover:bg-green-600`}
+              >
+                {
+                  currentSong === 15 && isPlaying ? <span className="font-bold">Pause</span> :
+                    <span className="font-bold">Play</span>
+
+                }
+
+              </button>
+              </div>
+              </strong> लौट जाओ सुदामा , लौट जाओ , देखा , बुलावा आने में कितना विलंब कर दिया
             ।
             अब श्री कृष्ण तुम्हारा मित्र नहीं है। अब वो द्वारिकाधीश बन गए हैं तुम सुदामा अपना बचपना छोड़ दो वो तुम्हें कब
             का
@@ -586,20 +601,7 @@ const MusicPlayer = () => {
                 }
 
               </button>
-             <div className="mt-5 mb-5">
-              <button
-                onClick={() => playSong(15)}
-                className={`px-4 py-2 rounded-lg text-white ${currentSong === 15 && isPlaying ? "bg-red-500" : "bg-gray-500"
-                  } hover:bg-green-600`}
-              >
-                {
-                  currentSong === 15 && isPlaying ? <span className="font-bold">Pause</span> :
-                    <span className="font-bold">Play</span>
-
-                }
-
-              </button>
-              </div>
+             
             </div>
 
           <p>(श्री कृष्ण सुदामा का नाम सुनते ही भावुक हो जाते हैं। वह अपने मित्र से मिलने के लिए व्याकुल हो जाते हैं।)</p>
