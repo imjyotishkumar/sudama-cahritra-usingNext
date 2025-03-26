@@ -19,6 +19,10 @@ const songs = [
   { title: "Song 10", src: "/song/kanhaiya har ghadi mujhko.mp3" },
   { title: "Song 10", src: "/song/narayan namstubhayam and radhe krishna.mp3" },
   { title: "Song 10", src: "/song/dialog1.mp3" },
+  { title: "Song 10", src: "/song/aredwarpalo.mp3" },
+  { title: "Song 10", src: "/song/cowvoice1.mp3" },
+
+
 
 
 ];
@@ -240,6 +244,20 @@ const MusicPlayer = () => {
             <p>सुदामा, और उनके चारों बच्चे खाना खाने बैठते हैं। बच्चे खा रहे हैं। वसुंधरा जैसे ही सुदामा को खाना परोसती हैं
               और
               जैसे ही निवाला मुंह में लेने ही वाला रहता है की सुदामा को गाय की आवाज दो तीन वार सुनाई पड़ती है ।</p>
+              <div className="flex items-center justify-center mt-2 mb-2 ">
+              <button
+                onClick={() => playSong(17)}
+                className={`px-4 py-2 rounded-lg text-white ${currentSong === 17 && isPlaying ? "bg-red-500" : "bg-gray-500"
+                  } hover:bg-green-600`}
+              >
+                {
+                  currentSong === 17 && isPlaying ? <span className="font-bold">Pause</span> :
+                    <span className="font-bold">Play</span>
+
+                }
+
+              </button>
+            </div>
             <p><b>सुदामा :</b> अरे , आज मैं धेनु को कैसे भूल गया । मैं धेनु को भोजन देकर आता हूँ (सुदामा अपने हिस्से का आधा
               भोजन धेनु को
               देने जाता है । गाय को खाना देने के बाद ज्योंही सुदामा खाने को बैठता है तभी एक विक्षिप्त एवं जीर्ण – शीर्ण कपड़े
@@ -510,12 +528,12 @@ const MusicPlayer = () => {
           <p>Music….….….….….….</p>
           <div className="flex items-center justify-center mt-2 mb-2 ">
               <button
-                onClick={() => playSong(6)}
-                className={`px-4 py-2 rounded-lg text-white ${currentSong === 6 && isPlaying ? "bg-red-500" : "bg-gray-500"
+                onClick={() => playSong(16)}
+                className={`px-4 py-2 rounded-lg text-white ${currentSong === 16 && isPlaying ? "bg-red-500" : "bg-gray-500"
                   } hover:bg-green-600`}
               >
                 {
-                  currentSong === 6 && isPlaying ? <span className="font-bold">Pause</span> :
+                  currentSong === 16 && isPlaying ? <span className="font-bold">Pause</span> :
                     <span className="font-bold">Play</span>
 
                 }
